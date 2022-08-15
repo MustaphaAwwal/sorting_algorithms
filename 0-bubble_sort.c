@@ -8,9 +8,11 @@
  * @size: Number of elements in @array
  */
 void bubble_sort(int *array, size_t size){
-    int i, j, temp;
-    for (i = 0; i < size; i++){
-        for (j = 0; j < size - 1; j++)
+    int i, j, temp, k;
+    
+    k = size;
+    for (i = 0; i < k; i++){
+        for (j = 0; j < k - 1; j++)
         {
                if (array[j] > array[j+1])
                 {
@@ -18,7 +20,7 @@ void bubble_sort(int *array, size_t size){
                     array[j] = array[j + 1];
                     array[j+1] = temp;
                 }
-                if (j == size - 2){
+                if (j == k - 2){
                     printf("%d", array[j]);
                 }
                 else{
